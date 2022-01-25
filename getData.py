@@ -42,8 +42,6 @@ def concatClcFragments(df_clicks):
     click_main = pd.concat([click_revenue_1, click_revenue_0])
     return for_revenue_file, click_main
 
-def chunksProc():
-
 
 # Переменные
 chunk_size = 10000         # Размер обрабатываемых фрагментов
