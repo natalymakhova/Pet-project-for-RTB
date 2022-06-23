@@ -1,35 +1,35 @@
 # Pet-project-for-RTB
-**RTB - Real Time Bidding, или торг в реальном времени. 
-В данном проекте осущствляется обработка и анализ данных, собранных в RTB-системе.** 
+**RTB - Real Time Bidding. 
+The project analyzes the data of site visitors.** 
 
-## Описание проекта
-Данные для проекта были получены от реальной рекламной площадки. Первым этапом стало выявление пользователей, которые нажали на рекламную ссылку и при этом с большей долей вероятности принесут доход. Также из этих данных можно получить информацию о фроде и о том, каким пользователям стоит рекламу показывать в принципе. Это уже следующие этапы. 
-Конечная цель - разработка системы RTB, которая самостоятельно выбирает размер ставок, используя для этого накопленные данные и алгоритмы машинного обучения. 
+## Project Description
+The data for the project was obtained from a real advertising platform. The first step was to identify users who clicked on an advertising link and were more likely to generate income. Also, from this data, you can get information about the fraud and which users should be shown ads in principle. These are the next steps.
+The ultimate goal is to develop an RTB system that independently chooses the size of bets using accumulated data and machine learning algorithms.
 
-## Описание данных
-В наличии имеется несколько репозиториев с файлами, которые находятся на FTP-сервере. 
-Данные представляют собой архивы двух типов: 
-- данные с показами;
-- данные с "кликами".
-В первых содержится информация о показанной рекламе и пользователях, которые эту рекламу увидели. 
-Во вторых - иформация, относящаяся к случаям, когда пользователь не только увидел рекламу, но и кликнул на рекламный баннер. Если после клика на баннер была осуществлено целевое действие, приносящее рекламодателю доход, то такой пользователь имеет положительное число в графе "revenue" (доход).
+## Data Description
+There are several repositories with files that are located on the FTP server.
+The data are archives of two types:
+- data with impressions;
+- data with "clicks".
+The first contains information about the ad shown and the users who saw this ad.
+Secondly, information related to cases when the user not only saw an advertisement, but also clicked on an advertising banner. If, after clicking on the banner, a target action was performed that brought the advertiser income, then such a user has a positive number in the "revenue" (income) column.
 
-## Файлы проекта
+## Project files
 
 ### DataAnalysis.ipynb 
-Имеющиейся файлы с данными рассматриваются с целью определить их содержание и характер хранящихся там данных. 
+Data files are reviewed to determine their content and the nature of the data stored there.
 	
 ### getData.py 
-Файлы скачиваются поочередно и рассматриваются фрагментами, поскольку файлы с показами содержат около 120 миллионов записей, файлы с кликами - около 1,5 миллионов. Набранные в процессе обработки данные сохраняются для дальнешей работы. 
+Files are downloaded one by one and considered as fragments, since files with impressions contain about 120 million records, files with clicks - about 1.5 million. The data collected during processing is stored for further work.
 
 ### dataPreprocessing.py
-Обработка данных и создание обучающих выборок.
+Data processing and creation of training samples.
 
 ### ML_Regression.ipynb 
-Решение задачи регрессии, где в качестве целевой функции выступает графа "доход" (revenue). Обученная модель должена определить, какой доход (revenue) можно ждать от определенного пользователя.
-Использованные для обучения алгоритмы: Random Forest, XGBoost
+The solution of the regression problem, where the "income" column (revenue) acts as the objective function. The trained model must determine what revenue (revenue) can be expected from a particular user.
+Algorithms used for training: Random Forest, XGBoost
 
 ### ML_Classification.ipynb 
-Решение задачи классификации, где в качестве целевой функции выступает графа "доход" (revenue).
-Классификатор должен определить, будет ли от определенного пользователя, кликнувшего рекламу доход (revenue=1) , или нет (revenue=0).
-Использованные для обучения алгоритмы: Random Forest, XGBoost
+The solution of the classification problem, where the "income" column (revenue) acts as the objective function.
+The classifier must determine whether a certain user who clicks on an ad will generate income (revenue=1) or not (revenue=0).
+Algorithms used for training: Random Forest, XGBoost
