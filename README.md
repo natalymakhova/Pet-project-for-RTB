@@ -11,6 +11,7 @@ There are several repositories with files that are located on the FTP server.
 The data are archives of two types:
 - data with impressions;
 - data with "clicks".
+
 The first contains information about the ad shown and the users who saw this ad.
 Secondly, information related to cases when the user not only saw an advertisement, but also clicked on an advertising banner. If, after clicking on the banner, a target action was performed that brought the advertiser income, then such a user has a positive number in the "revenue" (income) column.
 
